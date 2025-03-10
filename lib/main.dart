@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:tes2_project/pages/home_page.dart';
+import 'package:tes2_project/pages/ip_input_page.dart';
 import 'pages/login_page.dart';
 import 'dart:core';
 
-
-Future<void> main() async {
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      title: 'Smart-Watt',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
+      home: const IpInputPage(),
     );
   }
 }
